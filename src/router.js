@@ -2,7 +2,7 @@ import login from "./components/login/login.js";
 import newsFeed from "./components/feed/news-feed.js";
 import globalFunctions from "./global-functions.js";
 
-let pathPrefix = window.location.origin.indexOf(":5000") === -1 ? "/social-network" : "";
+let pathPrefix = window.location.origin.indexOf(":5000") > -1 || window.location.origin.indexOf("firebaseapp") > -1 ? "" : "/social-network";
 
 let routes = {
   "/": checkLogin,
